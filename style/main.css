@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+}
+
+p, h1, h2, h3, h4, h5, h6, body{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+
+.body{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto;
+    gap: 30px;
+    grid-template-areas: 
+    "n n n n n"
+    "l m m m r"
+    "f f f f f"
+    ;
+}
+
+
+
+.nav{
+    grid-area: n;
+    background-color: blue;
+    height: 60px;
+}
+.main{
+    grid-area: m;
+    background-color: brown;
+}
+.main>.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    padding: 20px 40px;
+}
+.cards{
+    padding: 10px 20px;
+    border: 2px solid black;
+}
+.cards>.card-footer{
+    text-align: right;
+}
+.rightbar{
+    grid-area: r;
+    background-color: white;
+}
+.footer{
+    grid-area: f;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+}
+.leftbar{
+    grid-area: l;
+    background-color: white;
+}
